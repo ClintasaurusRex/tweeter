@@ -3,7 +3,7 @@ main .new-tweet{
   font-family: "Bungee", sans-serif;
 }
 main textarea {
-  width: 90%;
+  width: 90em;
   border: none;
   border-bottom: 6px rgb(252, 250, 250) solid;
   outline: none;
@@ -23,5 +23,5 @@ main output {
 }
 main label {
   display: block;
-  margin-left: 5.5em;
+  margin-left: 8.3em;
 }
