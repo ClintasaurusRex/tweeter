@@ -32,6 +32,10 @@
 
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
+  <!-- new Tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -45,7 +49,7 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span class="tweet-text">TWEETER!</span>
+    <span class="tweeter-text">TWEETER!</span>
     <div class="write-text">
       <span>Write a new tweet</span>
       <i class="fas fa-angle-double-down"></i>
@@ -65,9 +69,17 @@
 
   <!-- Page-specific (main) content here -->
   <main class="container">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, adipisci! Minima nobis accusamus architecto
-      harum provident dignissimos itaque, similique, quo quam dicta velit fugiat deleniti cupiditate, corrupti ducimus
-      ab quis!</p>
+    <section>
+      <h2>Compose Tweet</h2>
+      <form action="/tweets" method="POST">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea name="text" id="tweet-text"></textarea>
+        <div>
+          <button type="submit">Tweet</button>
+          <output name="counter" class="counter" for="tweet-text">140</output>
+        </div>
+      </form>
+    </section>
   </main>
 </body>
 

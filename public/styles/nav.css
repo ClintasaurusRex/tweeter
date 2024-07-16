@@ -10,7 +10,7 @@ nav {
   position: fixed;
   top: 0;
 }
-nav .tweet-text {
+nav .tweeter-text {
   font-family: "Bungee", sans-serif;
   display: inline-block;
 }
