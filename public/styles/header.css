@@ -3,6 +3,7 @@ header {
   height: 400px;
   align-items: center;
   background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-big.png");
+  justify-content: center;
 }
 header div {
   display: flex;
