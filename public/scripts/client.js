@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
 const createTweetElement = function(tweet) {
   const x = $(`
     <article class="tweet">
@@ -73,6 +74,31 @@ const renderTweets = function(tweets) {
 
   }
 };
-
 renderTweets(data);
+
+$.ajax({
+  method: "GET",
+  url: "/tweets",
+})
+  .then(renderTweets)
+  .catch(console.log);
+
+$(".tweet-button").click(function() {
+  $(".new-tweet").toggleClass("hidden");
+});
+
+$(".new-tweet form").on("submit", function(event) {
+  event.preventDefault();
+
+  const data = $(event.currentTarget).serialize();
+  console.log(data);
+
+  $.ajax({
+    method: "POST",
+    url: "/tweets",
+    data
+  });
+
+
+});
 
