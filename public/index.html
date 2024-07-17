@@ -33,6 +33,9 @@
   <!-- new Tweet CSS -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+  <!-- Tweet CSS -->
+  <!-- new Tweet CSS -->
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -41,7 +44,7 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
 
   <!-- Character Counter -->
-  <script type="text/javascript" src=/scripts/composer-char-counter.js></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
 </head>
 
@@ -56,7 +59,7 @@
     </div>
   </nav>
 
-  <header>
+  <header id="page-header">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -80,8 +83,49 @@
         </div>
       </form>
     </section>
+    <!-- Tweet Section -->
+    <!-- Assuming other content like a form here -->
+
+    <div class="tweets">
+      <article class="tweet">
+        <header>
+
+          <h3><img src="images/profile-hex.png" alt="User Avatar"> Newton</h3>
+          <h4 class="handle">@SirIssac</h4>
+        </header>
+        <p>If I have seen further it is by standing on the shoulders of giants</p>
+        <footer>
+          <time datetime="2024-07-16">Today</time>
+          <div class="icons">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </div>
+
   </main>
 </body>
 
-
 </html>
+
+
+<!-- <article class="tweet">
+  <header>
+    <img src="images/profile-hex.png" alt="User Avatar">
+    <h3>Newton</h3>
+    <span class="handle">@SirIssac</span>
+  </header>
+  <p>If I have seen futher it is by standing on the shoulders of giants</p>
+  <footer>
+    <time datetime="2024-07-16">Today</time>
+    <div class="icons">
+      <i class="fa-solid fa-flag"></i>
+      <i class="fa-solid fa-retweet"></i>
+      <i class="fa-solid fa-heart"></i>
+    </div>
+  </footer>
+</article>
+</main>
+</body> -->
