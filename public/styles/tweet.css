@@ -60,3 +60,113 @@ article.tweet footer div.icons i {
 article.tweet footer div.icons i:hover {
   color: rgb(136, 136, 2);
 }
+
+.head-down {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+/* @media only screen and (max-width: 768px) { */
+@media screen and (max-width: 1024px) {
+
+  .head-down {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+
+
+
+  /* /* body {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #page-header {
+    float: left;
+    width: 50%;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    margin-right: 50vw;
+    height: 30%;
+  }
+
+  .container {
+    float: right;
+    width: 65%;
+    margin-left: 25%;
+  }
+
+  #tweet {
+    width: 50vw;
+  }
+
+  /* .new-tweet,
+  .tweet {
+    width: 100%;
+  } */
+
+
+  /* .tweet {
+    float: right;
+    width: 50%;
+  }
+/* .tweet {
+    float: right;
+    width: 50%;
+  }
+
+  .tweeting {
+    float: right;
+  }
+
+  #page-header {
+    float: left;
+    width: 50%;
+  } */
+
+
+
+  float: left;
+  width: 50%;
+}
+
+*/
+}
+
+.tweeting {
+  float: right;
+}
+
+/* body {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #page-header {
+    float: left;
+    width: 50%;
+    margin-top: 10vh;
+    margin-left: 5vw;
+    margin-right: 50vw;
+    height: 30%;
+  }
+
+  .container {
+    float: right;
+    width: 65%;
+    margin-left: 25%;
+  }
+
+  #tweet {
+    width: 50vw;
+  }
+
+  /* .new-tweet,
+  .tweet {
+    width: 100%;
+  } */
+}

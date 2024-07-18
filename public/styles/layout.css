@@ -34,3 +34,8 @@ main .container {
 /*
 * Additional CSS can be defined below or in other CSS files, as per instructions
 */
+@media only screen and (max-width: 1024px) {
+  body {
+    padding-top: 0;
+  }
+}

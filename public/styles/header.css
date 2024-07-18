@@ -1,5 +1,5 @@
 header#page-header {
-  width: 100%;
+  width: 400px;
   height: 400px;
   align-items: center;
   background-color: #780006;
@@ -22,7 +22,11 @@ header#page-header h2 {
   color: rgb(0, 0, 0);
 }
 
-header-bg {
-  background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre-big.png");
-  justify-content: center;
+
+@media only screen and (max-width: 1024px) {
+  header#page-header {
+    width: 100%;
+    padding-top: 100px;
+    height: auto;
+  }
 }
