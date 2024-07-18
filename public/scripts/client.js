@@ -4,8 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-
+  // create function to create tweet element
   const createTweetElement = function(tweet) {
+    // create tweet HTML structure
     const x = $(`
     <article class="tweet">
         <header>
@@ -27,18 +28,19 @@ $(document).ready(function() {
     return x;
   };
 
-
+  // create a function to render tweets
   const renderTweets = function(tweets) {
-    $("#tweets").empty();
+    $("#tweets").empty();// Clear existing tweets(keeps them form doubling)
     const tweetId = $(`#tweets`);
 
+    // Prepend each tweet to container(puts newest at the top)
     for (const tweet of tweets) {
       const tweetElement = createTweetElement(tweet);
       tweetId.prepend(tweetElement);
 
     }
   };
-
+  // create a function to load tweets form the server
   const loadTweets = function() {
     $.ajax({
       method: "GET",
@@ -51,13 +53,26 @@ $(document).ready(function() {
   };
 
   loadTweets();
+  // this is the form submission handler
   $(".container form").on("submit", function(event) {
-    console.log("function running");
     event.preventDefault();
 
-    const data = $(event.currentTarget).serialize();
-    console.log(data);
+    // This gets the tweet content, trim takes off whitespace
+    const toTextOrNotToText = $(event.currentTarget).find("textarea").val().trim();// check if the text area is MT or has to many characters
+    if (!toTextOrNotToText) {
+      alert("You didnt type anything");
+      return;
+    }
+    if (toTextOrNotToText.length > 140) {
+      alert("You've got to much to say");
+      return;
+    }
 
+    // serialize the form data
+    const data = $(event.currentTarget).serialize();
+    // console.log(data);
+
+    // post it all to the server
     $.ajax({
       method: "POST",
       url: "/tweets",
@@ -65,6 +80,7 @@ $(document).ready(function() {
     })
       .then(function() {
         loadTweets();
+        $(".tweet-box").val('');
       });
   });
 });
