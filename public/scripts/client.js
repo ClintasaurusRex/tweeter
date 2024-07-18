@@ -62,7 +62,10 @@ $(document).ready(function() {
       .then(function(data) {
         renderTweets(data);
       })
-      .catch(console.log("Error"));
+      .catch(function(error) {
+        console.error("Error loading tweets:", error);
+      });
+
   };
 
   loadTweets();
@@ -70,16 +73,18 @@ $(document).ready(function() {
   $(".container form").on("submit", function(event) {
     event.preventDefault();
 
+
     // This gets the tweet content, trim takes off whitespace
     const toTextOrNotToText = $(event.currentTarget).find("textarea").val().trim();// check if the text area is MT or has to many characters
     if (!toTextOrNotToText) {
-      alert("You didnt type anything");
+      $(".error-message").text("⚠️ You didn't type anything ⚠️").slideDown();
       return;
     }
     if (toTextOrNotToText.length > 140) {
-      alert("You've got to much to say");
+      $(".error-message").text("⚠️ Your tweet is too long ⚠️").slideDown();
       return;
     }
+
 
     // serialize the form data
     const data = $(event.currentTarget).serialize();
