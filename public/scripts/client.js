@@ -4,17 +4,30 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  // create an escape funtion to stop
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
+
   // create function to create tweet element
   const createTweetElement = function(tweet) {
     // create tweet HTML structure
+    const safeName = escape(tweet.user.name);
+    const safeHandle = escape(tweet.user.handle);
+    const safeText = escape(tweet.content.text);
+
     const x = $(`
     <article class="tweet">
         <header>
 
-          <h3><img src="${tweet.user.avatars}" alt="User Avatar">${tweet.user.name}</h3>
-          <h4 class="handle">${tweet.user.handle}</h4>
+          <h3><img src="${tweet.user.avatars}" alt="User Avatar">${safeName}</h3>
+          <h4 class="handle">${safeHandle}</h4>
         </header>
-        <p>${tweet.content.text}</p>
+        <p>${safeText}</p>
         <footer>
           <time>${timeago.format(tweet.created_at)}</time>
           <div class="icons">
@@ -47,9 +60,9 @@ $(document).ready(function() {
       url: "/tweets",
     })
       .then(function(data) {
-        renderTweets(data)
-          .catch(console.log("Error"));
-      });
+        renderTweets(data);
+      })
+      .catch(console.log("Error"));
   };
 
   loadTweets();

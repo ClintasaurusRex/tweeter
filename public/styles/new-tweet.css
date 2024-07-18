@@ -6,6 +6,9 @@ main .tweet-button {
 
 main .tweet-button:hover {
   transform: scale(1.1);
+  box-shadow: rgba(34, 156, 231, 0.881);
+  outline: 3px solid rgba(34, 156, 231, 0.881);
+  border-radius: 4px;
 }
 
 main .tweet-box {
