@@ -11,14 +11,12 @@ article.tweet:hover {
 
 article.tweet header {
   width: 100%;
-  /* height: 400px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   color: darkgray;
-  /* Add some padding at the top */
 }
 
 article.tweet header h4 {
@@ -74,99 +72,4 @@ article.tweet footer div.icons i:hover {
     flex-direction: column;
     margin-top: 0;
   }
-
-
-
-
-  /* /* body {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  #page-header {
-    float: left;
-    width: 50%;
-    margin-top: 10vh;
-    margin-left: 5vw;
-    margin-right: 50vw;
-    height: 30%;
-  }
-
-  .container {
-    float: right;
-    width: 65%;
-    margin-left: 25%;
-  }
-
-  #tweet {
-    width: 50vw;
-  }
-
-  /* .new-tweet,
-  .tweet {
-    width: 100%;
-  } */
-
-
-  /* .tweet {
-    float: right;
-    width: 50%;
-  }
-/* .tweet {
-    float: right;
-    width: 50%;
-  }
-
-  .tweeting {
-    float: right;
-  }
-
-  #page-header {
-    float: left;
-    width: 50%;
-  } */
-
-
-
-  float: left;
-  width: 50%;
-}
-
-*/
-}
-
-.tweeting {
-  float: right;
-}
-
-/* body {
-    display: flex;
-    flex-direction: column;
-
-  }
-
-  #page-header {
-    float: left;
-    width: 50%;
-    margin-top: 10vh;
-    margin-left: 5vw;
-    margin-right: 50vw;
-    height: 30%;
-  }
-
-  .container {
-    float: right;
-    width: 65%;
-    margin-left: 25%;
-  }
-
-  #tweet {
-    width: 50vw;
-  }
-
-  /* .new-tweet,
-  .tweet {
-    width: 100%;
-  } */
 }
