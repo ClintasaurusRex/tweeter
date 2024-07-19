@@ -33,7 +33,7 @@ Tweeter is a simple, single-page Twitter clone built with HTML, CSS, JS, jQuery,
 
 ## Future Improvements
 
-- Upgrading sass CSS
+- Upgrading SASS CSS
 
 ## Contributing
 
