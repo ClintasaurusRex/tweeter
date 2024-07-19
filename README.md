@@ -11,6 +11,9 @@ Tweeter is a simple, single-page Twitter clone built with HTML, CSS, JS, jQuery,
 - Error handling for empty tweets and tweets exceeding character limit
 
 ## Screenshots
+!["Screenshot of main page"](https://github.com/ClintasaurusRex/tweeter/blob/master/Docs/main-page.png?raw=true)
+!["Screenshot of asking for characters"](https://github.com/ClintasaurusRex/tweeter/blob/master/Docs/more-chars.png?raw=true)
+!["Screenshot of page sizing"](https://github.com/ClintasaurusRex/tweeter/blob/master/Docs/sizing-page.png?raw=true)
 
 ## Getting Started
 
