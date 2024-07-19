@@ -99,6 +99,7 @@ $(document).ready(function() {
       .then(function() {
         loadTweets();
         $(".tweet-box").val('');
+        $(".counter").text(140);  // Reset character count
       });
   });
 });

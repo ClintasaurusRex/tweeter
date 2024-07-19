@@ -9,11 +9,14 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 nav .tweeter-text {
   font-family: "Bungee", sans-serif;
   display: inline-block;
+  font-size: 40px;
 }
 
 nav .write-text {
@@ -28,8 +31,29 @@ nav .write-text span {
 }
 
 nav .write-text i {
-  font-size: 1.5em;
+  font-size: 27px;
   color: red;
+  margin-top: 6px;
+  animation: bounce 0.5s infinite alternate;
+}
+
+nav .write {
+  font-family: "Bungee", sans-serif;
+  font-size: 1em;
+}
+
+nav span {
+  font-size: 19px;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-5px);
+  }
 }
 
 @media only screen and (max-width: 1024px) {
